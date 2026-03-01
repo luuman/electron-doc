@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocs_workspace=globalThis.webpackChunkdocs_workspace||[]).push([[1903],{1912(o){o.exports=JSON.parse('{"blogBasePath":"/electron-doc/blog","blogTitle":"Blog","authorsListPath":"/electron-doc/blog/authors"}')}}]);

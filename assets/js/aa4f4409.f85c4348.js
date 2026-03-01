@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocs_workspace=globalThis.webpackChunkdocs_workspace||[]).push([[7774],{2457(o){o.exports=JSON.parse('{"metadata":{"permalink":"/electron-doc/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

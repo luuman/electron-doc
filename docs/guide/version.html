@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-guide/version" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">版本抉择 | Electron Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://luuman.github.io/electron-doc/docs/guide/version"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="版本抉择 | Electron Docs"><meta data-rh="true" name="description" content="✅ 我查好了权威官方数据（主要是 Electron 的发布时间线 + 栈变化 + 一些 breaking change 摘要），下面用表格给你整理 从 v27 到 v39 的核心变化（注意：官方没有把每个版本的完整变化直接按版汇总，我做了重要特性 &amp; API 改动的聚合总结）："><meta data-rh="true" property="og:description" content="✅ 我查好了权威官方数据（主要是 Electron 的发布时间线 + 栈变化 + 一些 breaking change 摘要），下面用表格给你整理 从 v27 到 v39 的核心变化（注意：官方没有把每个版本的完整变化直接按版汇总，我做了重要特性 &amp; API 改动的聚合总结）："><link data-rh="true" rel="icon" href="/electron-doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://luuman.github.io/electron-doc/docs/guide/version"><link data-rh="true" rel="alternate" href="https://luuman.github.io/electron-doc/docs/guide/version" hreflang="zh"><link data-rh="true" rel="alternate" href="https://luuman.github.io/electron-doc/docs/guide/version" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"开始","item":"https://luuman.github.io/electron-doc/docs/guide/"},{"@type":"ListItem","position":2,"name":"版本抉择","item":"https://luuman.github.io/electron-doc/docs/guide/version"}]}</script><link rel="alternate" type="application/rss+xml" href="/electron-doc/blog/rss.xml" title="Electron Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/electron-doc/blog/atom.xml" title="Electron Docs Atom Feed"><link rel="stylesheet" href="/electron-doc/assets/css/styles.c3b0114a.css">
+<script src="/electron-doc/assets/js/runtime~main.01c72c76.js" defer="defer"></script>
+<script src="/electron-doc/assets/js/main.52b89587.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav class="navbar navbar--fixed-top navbar_MONK" role="navigation" aria-label="Main"><div class="navbarInner_ASTH"><div class="navbarLeft_pUmY"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="brand_SXL9" href="/electron-doc/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="var(--ifm-color-primary)"></rect><path d="M7 8.5h10M7 12h7M7 15.5h10" stroke="white" stroke-width="1.8" stroke-linecap="round"></path></svg><span class="brandTitle_XbyU">Electron</span></a><div class="dropdown_GrgZ"><button class="dropdownToggle_Nf_z">全部站点<svg class="dropdownArrow_Eka8" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><ul class="dropdownMenu_zsxH"><li><a href="https://luuman.github.io/docs-workspace/docs" class="dropdownMenuItem_VBaP">Workspace</a></li><li><a href="https://luuman.github.io/moltbot-doc/docs" class="dropdownMenuItem_VBaP">Moltbot</a></li><li><a href="https://luuman.github.io/claude-doc/docs" class="dropdownMenuItem_VBaP">Claude</a></li><li><a href="https://luuman.github.io/tauri-doc/docs" class="dropdownMenuItem_VBaP">Tauri</a></li><li><a href="https://luuman.github.io/matrx-doc/docs" class="dropdownMenuItem_VBaP">Matrx</a></li><li><a href="https://luuman.github.io/brainboard-doc/docs" class="dropdownMenuItem_VBaP">Brainboard</a></li><li><a href="https://luuman.github.io/synology-doc/docs" class="dropdownMenuItem_VBaP">Synology</a></li><li><a href="https://luuman.github.io/codex-doc/docs" class="dropdownMenuItem_VBaP">Codex</a></li><li><a href="https://luuman.github.io/ai-doc/docs" class="dropdownMenuItem_VBaP">AI</a></li></ul></div></div><div class="navbarCenter_Zdr3"><div class="root_OF3s"><span class="icon_UcOK" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span><div class="slot__FGx"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div class="navbarRight_q16u"><a class="navLink_RnnM" href="/electron-doc/docs">Docs</a><a class="navLink_RnnM" href="/electron-doc/blog">Blog</a><button class="themeToggle_zD_x" aria-label="Switch to light theme" title="Light"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button></div></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/electron-doc/docs/guide"><span title="开始" class="categoryLinkLabel_W154">开始</span></a><button aria-label="折叠侧边栏分类 &#x27;开始&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/electron-doc/docs/guide/convention"><span title="项目规范" class="linkLabel_WmDU">项目规范</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/electron-doc/docs/guide/version"><span title="版本抉择" class="linkLabel_WmDU">版本抉择</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/electron-doc/docs"><span title="index" class="linkLabel_WmDU">index</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/electron-doc/docs/package"><span title="插件" class="categoryLinkLabel_W154">插件</span></a><button aria-label="折叠侧边栏分类 &#x27;插件&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/electron-doc/docs/package/eslint"><span title="eslint" class="linkLabel_WmDU">eslint</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/electron-doc/docs/package/husky"><span title="husky" class="linkLabel_WmDU">husky</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/electron-doc/docs/package/rimraf"><span title="rimraf" class="linkLabel_WmDU">rimraf</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/electron-doc/docs/vite"><span title="Vite" class="categoryLinkLabel_W154">Vite</span></a><button aria-label="折叠侧边栏分类 &#x27;Vite&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/electron-doc/docs/vite/init-vite"><span title="Electron Vite MPA 项目搭建" class="linkLabel_WmDU">Electron Vite MPA 项目搭建</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="页面路径"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/electron-doc/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/electron-doc/docs/guide"><span>开始</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">版本抉择</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>版本抉择</h1></header>
+<p>✅ 我查好了权威官方数据（主要是 Electron 的发布时间线 + 栈变化 + 一些 breaking change 摘要），下面用表格给你整理 <strong>从 v27 到 v39 的核心变化</strong>（注意：官方没有把每个版本的完整变化直接按版汇总，我做了重要特性 &amp; API 改动的聚合总结）：</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-electron-版本与主要变化一览-v27--v39">📌 Electron 版本与主要变化一览 （v27 → v39）<a href="#-electron-版本与主要变化一览-v27--v39" class="hash-link" aria-label="📌 Electron 版本与主要变化一览 （v27 → v39）的直接链接" title="📌 Electron 版本与主要变化一览 （v27 → v39）的直接链接" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Electron 版本</th><th>发布/支持周期</th><th>栈/平台变动</th><th>重要变化/API 变更摘要</th></tr></thead><tbody><tr><td><strong>v27</strong></td><td>2023-10-10 起</td><td>Chromium ~118</td><td>✅ Dropped Win7/8/8.1 macOS 10.13/10.14；IPC sendTo 移除；移除部分 vibrancy/options；Draggable Region 变化等 ⚠ API 移除 &amp; 安全强化</td></tr><tr><td><strong>v28</strong></td><td>2024</td><td>Chromium ~120</td><td>⚠ “traffic light” 按钮 API 移除；WebContents.backgroundThrottling 行为变更；Rosetta 运行检测移除</td></tr><tr><td><strong>v29</strong></td><td>2024</td><td>Chromium ~122</td><td>⚠ ipcRenderer over contextBridge 行为变；移除 crash/renderer 事件等</td></tr><tr><td><strong>v30</strong></td><td>2024</td><td>Chromium ~124</td><td>⚠ cross-origin iframe Permission Policy；BrowserView setAutoResize 行为变；BrowserView class 弃用；移除 context-menu inputFormType &amp; process.getIOCounters</td></tr><tr><td><strong>v31</strong></td><td>2024-06</td><td>Chromium ~126</td><td>⚠ WebSQL 移除；nativeImage.toDataURL 行为改</td></tr><tr><td><strong>v32</strong></td><td>2024-08</td><td>Chromium ~128</td><td>⚠ File.path 移除；WebContents.goBack/canGoBack 等历史 API 移除；userData databases dir 清理</td></tr><tr><td><strong>v33</strong></td><td>2024-10</td><td>Chromium ~130</td><td>⚠ document.execCommand(&quot;paste&quot;) 弃用；WebFrameMain/ frame event 行为变</td></tr><tr><td><strong>v34</strong></td><td>2024-11</td><td>Chromium ~132</td><td>⚠ 在 Windows 全屏下菜单自动隐藏</td></tr><tr><td><strong>v35</strong></td><td>2025-03</td><td>Chromium ~134, Node v22, V8 13.5</td><td>✅ ServiceWorker preload；ServiceWorkerMain API；contextBridge.executeInMainWorld；WebContents navigationHistory API 等</td></tr><tr><td><strong>v36</strong></td><td>2025-04</td><td>Chromium ~136, Node v22</td><td>⚠ Windows fullscreen 菜单一致性行为；Deprecated &amp; Removed 一些无用 API</td></tr><tr><td><strong>v37</strong></td><td>2025-06</td><td>Chromium ~138, Node v22</td><td>⚠ Utility process unhandled rejection 改；process.exit 行为变；WebUSB/WebSerial blocklist 支持；移除 ProtocolResponse Session null 值</td></tr><tr><td><strong>v38</strong></td><td>2025-09</td><td>Chromium ~140, Node v22</td><td>❌ Removed: ELECTRON_OZONE_PLATFORM_HINT &amp; ORIGINAL_XDG_CURRENT_DESKTOP；Dropped macOS 11 Support；Removed plugin-crashed event</td></tr><tr><td><strong>v39</strong></td><td>2025-10</td><td>Chromium ~142, Node v22</td><td>⚠ Deprecated: –-host-rules；window.open 弹窗 always resizable；shared texture paint event data change</td></tr></tbody></table>
+<p>🔎 <strong>备注说明</strong>：</p>
+<ul>
+<li class="">Chrome/Node/V8 版本来自官方发布表格数据（见时间线）(<a href="https://releases.electronjs.org/release?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="Stable Pre Release Nightly" class="">releases.electronjs.org</a>)</li>
+<li class="">Breaking changes 摘要来自官方 Breaking Changes 页面整理（覆盖 v27–v39 多个版本 API 通告/变更趋势）(<a href="https://electronjs.org/docs/latest/breaking-changes?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="Breaking Changes" class="">electronjs.org</a>)</li>
+<li class="">v35 新增的 <strong>Service Worker preload &amp; ServiceWorkerMain</strong> 是该版本最大的特性之一（官方 release notes）(<a href="https://electronjs.org/blog/electron-35-0?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="Electron 35.0.0" class="">electronjs.org</a>)</li>
+<li class="">一些行为变更涉及安全、API 移除、默认行为调整等，对应用迁移有比较明显影响。</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-总结重点">🧠 总结重点<a href="#-总结重点" class="hash-link" aria-label="🧠 总结重点的直接链接" title="🧠 总结重点的直接链接" translate="no">​</a></h2>
+<p>✅ <strong>v27 → v30</strong></p>
+<ul>
+<li class="">最核心是 <strong>API 移除 &amp; 旧平台支持停用</strong>（Win7/8、macOS 10.x 系列）</li>
+<li class="">多个 IPC / webview 相关旧 API 陆续移除，尽量使用现代替代 API</li>
+</ul>
+<p>✅ <strong>v31 → v34</strong></p>
+<ul>
+<li class="">主要是 <strong>Web 标准变化 + Chromium 版本升级</strong></li>
+<li class="">这些变化会影响渲染层行为、历史 API 行为等</li>
+</ul>
+<p>✅ <strong>v35+</strong></p>
+<ul>
+<li class="">除了 Chromium/Node/V8 的更新之外，<strong>Service Worker 支持增强是最大特性</strong></li>
+<li class="">后续版本更偏向行为调整及弃用旧变量/feature</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-升级建议视角">📌 升级建议视角<a href="#-升级建议视角" class="hash-link" aria-label="📌 升级建议视角的直接链接" title="📌 升级建议视角的直接链接" translate="no">​</a></h2>
+<p>如果你关心 <strong>兼容性与生产发布稳定性</strong>：</p>
+<ul>
+<li class="">27–30→ 是最稳妥的线（API 变化较少，native 模块兼容性好）</li>
+<li class="">31+ → 可能需要解决一些 Web API 和 Node Behavior 的变化</li>
+</ul>
+<p>这也解释了为什么生产中很多项目停留在 <strong>27–30 区间</strong>。</p>
+<hr>
+<p>如果你想，我还可以做一张更细粒度的表，按每个版本列 <strong>具体 Breaking 改动细节（有 API 移除/默认变更）</strong>，这对于升级评估更有价值。要不要更详细版本对比？</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/electron-doc/docs/guide/convention"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">项目规范</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/electron-doc/docs"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">index</div></a></nav></div></div><div class="col col--3"><div class="tocWrapper_xKoj"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#-electron-版本与主要变化一览-v27--v39" class="table-of-contents__link toc-highlight">📌 Electron 版本与主要变化一览 （v27 → v39）</a></li><li><a href="#-总结重点" class="table-of-contents__link toc-highlight">🧠 总结重点</a></li><li><a href="#-升级建议视角" class="table-of-contents__link toc-highlight">📌 升级建议视角</a></li></ul></div><div class="tocFooter_Fu2z"><div class="themeGroup_RzWV" role="group" aria-label="Theme"><button class="themeBtn_tGr6" aria-label="Light theme" title="Light"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></svg></button><button class="themeBtn_tGr6 themeBtnActive_A6tm" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.83 17.963 17.315 22 12.002 22 6.477 22 2 17.523 2 12c0-5.314 4.038-9.827 9.38-10.28z"></path></svg></button></div></div></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Electron Docs.</div></div></div></footer></div>
+</body>
+</html>
